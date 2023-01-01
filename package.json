@@ -1,0 +1,29 @@
+{
+  "name": "vue_shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "nuxt-vue-select": "^0.1.4",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "@types/vue-select": "^3.16.2",
+    "gh-pages": "^4.0.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.57.1",
+    "sass-loader": "^10.4.1"
+  }
+}

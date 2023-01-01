@@ -1,0 +1,51 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin text-for-nav {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+
+  @include onDesktop {
+    font-size: 16px;
+  }
+}
+
+@mixin text-for-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+
+  @include onDesktop {
+    font-size: 40px;
+  }
+}
+
+@mixin text-for-paragraph {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+
+  @include onDesktop {
+    font-size: 18px;
+  }
+}
+
+@mixin text-for-link {
+  @include text-for-nav;
+  color: #000;
+  font-style: italic;
+}
